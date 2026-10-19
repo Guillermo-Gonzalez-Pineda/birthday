@@ -109,7 +109,7 @@ window.PRODUCTOS = [
     precio: 99.95,
     enlace: "https://www.massimodutti.com/es/chaqueta-tecnica-detalle-bolsillos-l03248410?pelement=62129873",
     imagen: "img/massimo-dutti-chaqueta-tecnica-detalle-bolsillos-arena.jpg",
-    nota: "Chaqueta técnica con cremallera · Arena o negro · Talla L",
+    nota: "Chaqueta técnica con cremallera · Arena · Talla L",
     prioridad: 2,
     reservado: false,
   },
