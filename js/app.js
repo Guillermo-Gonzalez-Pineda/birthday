@@ -22,6 +22,7 @@
     style: "currency",
     currency: "EUR",
     maximumFractionDigits: 0,
+    useGrouping: "always", // en es-ES, sin esto 1469 € no lleva punto de miles
   });
   const formatoFecha = new Intl.DateTimeFormat("es-ES", { day: "numeric", month: "long" });
 
@@ -143,9 +144,10 @@
 
   function pintarCabecera() {
     const nombre = String(CONFIG.nombre || "").trim();
-    const titulo = nombre ? "El cumple de " + nombre : "Mi cumpleaños";
+    const titulo =
+      String(CONFIG.titulo || "").trim() || (nombre ? "El cumple de " + nombre : "Mi cumpleaños");
     $("#titulo").textContent = titulo;
-    document.title = "Lista de deseos · " + titulo;
+    document.title = titulo;
     pintarCuentaAtras();
   }
 

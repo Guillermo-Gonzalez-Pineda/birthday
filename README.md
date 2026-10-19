@@ -33,7 +33,8 @@ y abre <http://localhost:8000>. Para pararlo, pulsa `Ctrl + C`.
 
 ```js
 window.CONFIG = {
-  nombre: "Guille",           // Se muestra como «El cumple de Guille»
+  titulo: "Mi Lista de Regalos", // Título de la cabecera y de la pestaña
+  nombre: "Guille",           // Saludo del aviso («¡Hola, Guille!»)
   cumpleanos: "03-07",        // "MM-DD", sin año → 7 de marzo
   whatsapp: "34600111222",    // Formato internacional SIN + ni espacios
   email: "yo@ejemplo.com",

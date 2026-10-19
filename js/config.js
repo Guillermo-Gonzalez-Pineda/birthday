@@ -5,7 +5,11 @@
  * (cualquiera puede ver el código fuente). Lee el aviso del README.
  */
 window.CONFIG = {
-  // Se muestra en la cabecera: «El cumple de …».
+  // Título grande de la cabecera y de la pestaña del navegador.
+  titulo: "Mi Lista de Regalos",
+
+  // Se usa en el saludo del mensaje de aviso («¡Hola, …!»). Si dejas el
+  // título vacío, la cabecera muestra «El cumple de …» con este nombre.
   nombre: "Guillermo González Pineda",
 
   // Fecha del cumpleaños en formato "MM-DD" (mes-día), SIN año, para que la
