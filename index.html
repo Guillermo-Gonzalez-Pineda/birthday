@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lista de deseos</title>
+  <meta name="description" content="Mi lista de deseos de cumpleaños. Elige un regalo y avísame para que nadie lo repita.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Scripts clásicos (no módulos) para que funcione abriendo el archivo directamente. -->
+  <script src="js/config.js" defer></script>
+  <script src="js/productos.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="saltar" href="#lista">Saltar a la lista</a>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera__interior">
+      <div>
+        <p class="cabecera__antetitulo">Lista de deseos</p>
+        <h1 class="cabecera__titulo" id="titulo">Mi cumpleaños</h1>
+        <p class="cabecera__fecha" id="fecha-cumple"></p>
+      </div>
+      <p class="cuenta-atras" id="cuenta-atras" hidden>
+        <span class="cuenta-atras__etiqueta" id="cuenta-atras-antes"></span>
+        <span class="cuenta-atras__numero" id="cuenta-atras-numero"></span>
+        <span class="cuenta-atras__etiqueta" id="cuenta-atras-despues"></span>
+      </p>
+    </div>
+  </header>
+
+  <main class="contenedor" id="lista" tabindex="-1">
+    <section class="controles" aria-label="Filtros">
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoría"></div>
+      <label class="interruptor">
+        <input type="checkbox" id="ocultar-regalados" role="switch">
+        <span>Ocultar ya regalados</span>
+      </label>
+    </section>
+
+    <p class="resumen" id="resumen" aria-live="polite"></p>
+    <ul class="rejilla" id="rejilla"></ul>
+    <p class="vacio" id="vacio" hidden></p>
+    <noscript><p class="vacio">Esta página necesita JavaScript para mostrar la lista.</p></noscript>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>¿Has elegido algo? Pulsa <strong>«Lo regalo yo»</strong> y avísame: lo marcaré como regalado para que nadie lo repita.</p>
+    </div>
+  </footer>
+
+  <dialog class="dialogo" id="dialogo" aria-labelledby="dialogo-titulo">
+    <form class="dialogo__interior" method="dialog">
+      <h2 class="dialogo__titulo" id="dialogo-titulo">¿Lo regalas tú?</h2>
+      <p class="dialogo__producto" id="dialogo-producto"></p>
+      <p>Avísame por donde prefieras. El mensaje ya va escrito; cuando lo reciba, lo marcaré como regalado en la lista.</p>
+      <div class="dialogo__opciones">
+        <a class="boton boton--primario" id="dialogo-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+          Avisar por WhatsApp<span class="sr-only"> (se abre en otra pestaña)</span>
+        </a>
+        <a class="boton boton--secundario" id="dialogo-email" href="#">Avisar por email</a>
+        <p class="dialogo__aviso" id="dialogo-sin-contacto" hidden>No hay datos de contacto configurados.</p>
+      </div>
+      <button class="boton boton--fantasma" type="submit" value="cancelar">Cancelar</button>
+    </form>
+  </dialog>
+</body>
+</html>
